@@ -1,0 +1,15 @@
+First: - console.log(‘Start’) is added to the Call Stack and executed then remove from the stack.
+
+Second: - console.log ([1,3,4,2,1,5]. removeNum (1)) will be added to the stack and executed. When it executed, it called the function remoeNum. setTimeout (function cb () {...}) is added to the Call Stack.
+When setTimeout (function cb () {...}) is executed. The browser creates a timer as part of the Web APIs. It is going to handle the countdown for you.
+
+Console.log(‘Finish’) will add to the stack and executed. After executed it removed from the stack 
+
+After at least 3000 MS, the timer completes, and it pushes the cb callback to the Callback Queue.
+The Event Loop takes cb from the Callback Queue and pushes it to the Call Stack. 
+
+Function cb will execute and remove from the stack
+
+
+ 
+ 
